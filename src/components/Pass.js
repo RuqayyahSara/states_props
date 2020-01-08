@@ -1,8 +1,8 @@
 import React from 'react';
 
 class Pass extends React.Component{
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state={
             name:{
                 firstName:"Ruqayyah",
@@ -21,6 +21,7 @@ class Pass extends React.Component{
 <div>
 <h1> Adding 2 numbers:{Number(this.props.a) + Number(this.props.b)} </h1>
     <p>{console.log(this.props)}</p>
+    <p>{this.props.Coder}</p>
         <p>{this.fullName()}</p>
         <p>{this.state.age}</p>
         <p>{this.state.job}</p>
