@@ -4,28 +4,19 @@ class Pass extends React.Component{
     constructor(){
         super();
         this.state={
-            name:{
-                firstName:"Ruqayyah",
-                lastName:"Sara"
-            },
-            age:19,
-            job:"Coder"
+            count:0
         }
     }
-    fullName(){
-    return (this.state.name.firstName + this.state.name.lastName);
-    }
-    
+   increment(){
+       this.setState({
+           count : this.state.count + 1
+       })
+   }
     render(){
         return(
 <div>
-<h1> Adding 2 numbers:{Number(this.props.a) + Number(this.props.b)} </h1>
-    <p>{console.log(this.props)}</p>
-    <p>{this.props.Coder}</p>
-        <p>{this.fullName()}</p>
-        <p>{this.state.age}</p>
-        <p>{this.state.job}</p>
-        
+        <h1>Count: {this.state.count}</h1> 
+        <button onClick={()=>this.increment()}>Increment</button>      
 </div>
         )
     }
