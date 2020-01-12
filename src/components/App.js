@@ -1,7 +1,9 @@
 import React from 'react';
-import Pass from "./Pass";
+// import Pass from "./Pass";
 // import Pass1 from "./Pass1";
-import Lifecycle from "./Lifecycle";
+// import Lifecycle from "./Lifecycle";
+import Form from "./Form";
+
 
 class App extends React.Component{
 constructor(props){
@@ -13,9 +15,10 @@ constructor(props){
 render(){
   return (
     <div >
-        <Pass Coder={this.state.job} name="Ruqayyah" age="19" a="2" b="3"/>
+        <Form/>
+        {/* <Pass Coder={this.state.job} name="Ruqayyah" age="19" a="2" b="3"/> */}
         {/* <Pass1 name="Cody" age="29" /> */}
-        <Lifecycle/>
+        {/* <Lifecycle/> */}
     </div>
   )
 }
