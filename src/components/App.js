@@ -16,7 +16,6 @@ render(){
         <Pass Coder={this.state.job} name="Ruqayyah" age="19" a="2" b="3"/>
         {/* <Pass1 name="Cody" age="29" /> */}
         <Lifecycle/>
-
     </div>
   )
 }

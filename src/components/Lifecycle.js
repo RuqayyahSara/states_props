@@ -4,31 +4,28 @@ class Lifecycle extends React.Component{
     constructor(){
         super();
         this.state={
-            status: "null"
-        }
-        console.log(this.state.status+"hi");
-
+            time: new Date()
+        };
     }
-    // setState() is asynchronous
     componentDidMount(){
-        this.setState({
-     status: "true"
-        },()=>{console.log(this.state.status);})
-         
+     this.newTime= setInterval(()=>{
+         this.setState({
+             time: new Date()
+         })
+     },1000)    
 
     }
 
-    componentWillMount(){
-        this.setState({
-            status: "false"
-               },()=>{console.log(this.state.status);})
+    componentWillUnmount(){
+        clearInterval(this.newTime);
+
     }
-    
+
     render(){
         return(
             <div>
-                <h1>MY STATUS</h1>
-        <p> Sleeping - {this.state.status}</p>
+                <h1>TIME</h1>
+               <p>  {this.state.time.toLocaleTimeString()}</p>
             </div>
         )
     }
