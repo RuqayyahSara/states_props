@@ -6,6 +6,8 @@ class Pass extends React.Component{
         this.state={
             count:0
         }
+        this.increment = this.increment.bind(this);
+
     }
    increment(){
        this.setState({
@@ -14,10 +16,10 @@ class Pass extends React.Component{
    }
     render(){
         return(
-<div>
+        <div>
         <h1>Count: {this.state.count}</h1> 
-        <button onClick={()=>this.increment()}>Increment</button>      
-</div>
+        <button onClick={this.increment}>Increment</button>      
+        </div>
         )
     }
 }
